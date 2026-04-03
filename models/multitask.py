@@ -18,6 +18,10 @@ class MultiTaskPerceptionModel(nn.Module):
             localizer_path: Path to trained localizer weights.
             unet_path: Path to trained unet weights.
         """
+        import gdown
+        gdown.download(id="<classifier.pth drive id>", output=classifier_path, quiet=False)
+        gdown.download(id="<localizer.pth drive id>", output=localizer_path, quiet=False)
+        gdown.download(id="<unet.pth drive id>", output=unet_path, quiet=False)
         pass
 
     def forward(self, x: torch.Tensor):
