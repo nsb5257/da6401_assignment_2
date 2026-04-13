@@ -16,7 +16,7 @@ class MultiTaskPerceptionModel(nn.Module):
         super().__init__()
         import gdown
         gdown.download(id="1px9d3hh2hUYFMclVIlIZ0bViHGBHzf6d", output=classifier_path, quiet=False)
-        gdown.download(id="1FXS53aHA6L6xWbyGU0ObX6JkOTEIdGT", output=localizer_path, quiet=False)
+        gdown.download(id="1FXS53aHA6L6xWbyGU0ObX6JkOTEIdGT-", output=localizer_path, quiet=False)
         gdown.download(id="19a3xxVIWxthrB1jvih0eB1erFBTDBtvB", output=unet_path, quiet=False)
 
         self.classifier_model = VGG11Classifier(num_classes=num_breeds, in_channels=in_channels, use_bn=use_bn)
